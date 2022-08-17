@@ -45,21 +45,6 @@ const config: GatsbyConfig = {
         trackingIds: ["GA-TRACKING_ID"],
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Playfair Display`,
-            subsets: [`400`, `600`, `700`],
-          },
-          {
-            family: `Quicksand`,
-            subsets: [`400`, `500`, `600`, `700`],
-          },
-        ],
-      },
-    },
     "gatsby-plugin-offline",
   ],
 };
