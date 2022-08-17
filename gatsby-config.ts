@@ -9,6 +9,18 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Use Mirai`,
+        short_name: `Mirai`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#01534d`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
@@ -48,6 +60,7 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    "gatsby-plugin-offline",
   ],
 };
 
