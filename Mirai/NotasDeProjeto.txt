@@ -1,0 +1,27 @@
+# Metadata
+- title: Use Mirai
+- description: Elegância, Sol & Mar
+
+# Fonts
+- Playfair Display
+  - 400, 600, 700
+- Quicksand
+  - 400, 500, 600, 700
+
+# Palette
+- Primary
+  - main: #01534d
+  - dark: #002a25
+  - light: #3c8079
+- Secondary
+  - main: #f89261
+  - dark: #c16335
+  - light: #ffc38f
+- Contrast/Background
+  - main: #ffffff
+  - dark: #cccccc
+  - light: #ffffff
+- Other
+  - main: #00536c
+  - dark: #002a41
+  - light: #427f9a
