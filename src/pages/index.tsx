@@ -1,5 +1,6 @@
 import type { HeadFC } from "gatsby";
-import * as React from "react";
+import React from "react";
+import SEO from "../components/SEO";
 
 const pageStyles = {
   color: "#232129",
@@ -192,4 +193,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Mirai - Tela de Inicio</title>;
+export const Head: HeadFC = () => <SEO title={"Mirai - Tela de Inicio"} />;

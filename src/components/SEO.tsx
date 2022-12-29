@@ -3,7 +3,23 @@ import app from "gatsby-plugin-firebase-v9.0";
 import React, { useEffect } from "react";
 import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
-const SEO = ({ title, description, pathname, children, meta = [] }) => {
+type SEOProps = {
+  title?: string;
+  description?: string;
+  pathname?: string;
+  image?: string;
+  children?: React.ReactNode;
+  meta?: { name: string; content: string }[];
+};
+
+const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  image,
+  pathname,
+  children,
+  meta = [],
+}) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
@@ -13,6 +29,7 @@ const SEO = ({ title, description, pathname, children, meta = [] }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
+    image: image || "../images/icon.png",
     url: `${siteUrl}${pathname || ``}`,
     twitterUsername,
   };
@@ -33,10 +50,10 @@ const SEO = ({ title, description, pathname, children, meta = [] }) => {
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
-      <link rel="icon" href="../../Ganso.png" />
+      <link rel="icon" href="../images/icon.png" />
       {children}
       {meta.map((m) => (
-        <meta key={m.property} {...m} />
+        <meta key={m.name} {...m} />
       ))}
     </>
   );
