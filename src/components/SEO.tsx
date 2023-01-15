@@ -1,6 +1,4 @@
-import { getAnalytics } from "firebase/analytics";
-import app from "gatsby-plugin-firebase-v9.0";
-import React, { useEffect } from "react";
+import React from "react";
 import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 type SEOProps = {
@@ -33,9 +31,7 @@ const SEO: React.FC<SEOProps> = ({
     url: `${siteUrl}${pathname || ``}`,
     twitterUsername,
   };
-  useEffect(() => {
-    getAnalytics(app);
-  }, []);
+
   return (
     <>
       <title>{seo.title}</title>
